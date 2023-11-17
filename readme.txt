@@ -1,6 +1,6 @@
 === Calories Burned Calculator by Calculator.iO ===
 Contributors: calculatorio
-Tags: 
+Tags: calories burned calculator, exercise calorie counter, workout calorie tracker, burn calories, activity calorie burn, fitness calculator, calorie expenditure, walking calorie burn, running calorie calculator, gym workout calorie estimator
 Requires at least: 5.0
 Tested up to: 6.4.0
 Stable tag: 1.0.0
