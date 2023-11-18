@@ -1,4 +1,4 @@
-# Calories Burned Calculator WordPress Widget by [Calculator.iO](https://www.calculator.io/ "Calculator.iO Homepage")
+# Calories Burned Calculator Widget for WordPress
 
 Track your calorie burn with our free calorie calculator. Quickly estimate your calories burned based on activity and duration.
 
