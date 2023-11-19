@@ -7,7 +7,7 @@ Track your calorie burn with our free calorie calculator. Quickly estimate your 
 
 ## Installation
 
-1. [Download](https://github.com/pub-calculator-io/age-calculator/archive/refs/heads/master.zip) the ZIP file of this repository.
+1. [Download](https://github.com/pub-calculator-io/calories-burned-calculator/archive/refs/heads/master.zip) the ZIP file of this repository.
 2. Upload the /calories-burned-calculator-master/ folder to the /wp-content/plugins/ directory.
 3. Activate the [Calories Burned Calculator](https://www.calculator.io/calories-burned-calculator/ "Calories Burned Calculator Homepage") plugin through the "Plugins" menu in WordPress.
 
