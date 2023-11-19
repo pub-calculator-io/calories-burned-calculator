@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Calories Burned Calculator by www.calculator.io
+Plugin Name: CI Calories burned calculator
 Plugin URI: https://www.calculator.io/calories-burned-calculator/
 Description: Track your calorie burn with our free calorie calculator. Quickly estimate your calories burned based on activity and duration.
 Version: 1.0.0
