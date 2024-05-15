@@ -24,7 +24,6 @@ Add the following code to your template where you would like the Calories Burned
 == Screenshots ==
 
 1. The Calories Burned Calculator Input Form.
-2. The Calories Burned Calculator Calculation Results.
 
 == Installation ==
 

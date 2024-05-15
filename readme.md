@@ -3,7 +3,6 @@
 Track your calorie burn with our free calorie calculator. Quickly estimate your calories burned based on activity and duration.
 
 ![Calories Burned Calculator Input Form](/assets/images/screenshot-1.png "Calories Burned Calculator Input Form")
-![Calories Burned Calculator Calculation Results](/assets/images/screenshot-2.png "Calories Burned Calculator Calculation Results")
 
 ## Installation
 

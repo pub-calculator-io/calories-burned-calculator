@@ -32,7 +32,7 @@
                 </div>
                 <div class="calculator-content col tab tab--active" data-tab="0">
                 	<div class="input-wrapper row">
-                		<label class="input col ">
+                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator">
                 			<p class="input__title">Activity</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -51,7 +51,7 @@
                 			</div>
                 		</label>	</div>
                 	<div class="input-wrapper row">
-                		<label class="input col   ">
+                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator  ">
                 			<p class="input__title">Duration</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="duration_hours" value="1"  />
@@ -59,7 +59,7 @@
                 			</div>
                 		
                 		
-                		</label>		<label class="input col   ">
+                		</label>		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator  ">
                 			
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="duration_minutes" value="45"  />
@@ -85,7 +85,7 @@
                 </div>
                 <div class="calculator-content col tab" data-tab="1">
                 	<div class="input-wrapper row">
-                		<label class="input col ">
+                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator">
                 			<p class="input__title">Activity</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -104,7 +104,7 @@
                 			</div>
                 		</label>	</div>
                 	<div class="input-wrapper row">
-                		<label class="input col ">
+                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator">
                 			<p class="input__title">Speed mph</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -124,7 +124,7 @@
                 					</select>
                 				</div>
                 			</div>
-                		</label>		<label class="input col   ">
+                		</label>		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator  ">
                 			<p class="input__title">Distance</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="distance" value="5"  />
@@ -151,7 +151,7 @@
                 <div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row tab tab--active" data-tab="0">
                 
                 
-                		<button class="system-switcher" onclick="toggleSystem(this)">
+                		<button class="system-switcher" onclick="toggleSystem(this)" aria-label="Switch System">
                 			<div class="system-switcher__circle"></div>
                 			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 	<path d="M10.5 9.5H10C9.44772 9.5 9 9.05228 9 8.5V2.5M4.5 2.5H3.5C2.94772 2.5 2.5 2.94772 2.5 3.5L2.5 9.5M7.5 4.5L10.5 4.5M1.5 5.5L4.5 5.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
@@ -172,17 +172,19 @@
                 		</script>
                 
                 
-                	<button class="button button--primary ml-auto" onclick="calculate(this)">Calculate</button>
+                	<button class="button button--primary ml-auto" onclick="calculate(this); animateElements();" data-action="calculate" id="action-button">Calculate</button>
                 </div>
                 
                 
                 
                 
-                	<script type="text/javascript" src="./assets/js/calculator.js"></script>
+                
+                
+                	<script type="text/javascript" src="./assets/js/calculator.js" defer></script>
                 <div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row tab " data-tab="1">
                 
                 
-                		<button class="system-switcher" onclick="toggleSystem(this)">
+                		<button class="system-switcher" onclick="toggleSystem(this)" aria-label="Switch System">
                 			<div class="system-switcher__circle"></div>
                 			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 	<path d="M10.5 9.5H10C9.44772 9.5 9 9.05228 9 8.5V2.5M4.5 2.5H3.5C2.94772 2.5 2.5 2.94772 2.5 3.5L2.5 9.5M7.5 4.5L10.5 4.5M1.5 5.5L4.5 5.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
@@ -203,8 +205,10 @@
                 		</script>
                 
                 
-                	<button class="button button--primary ml-auto" onclick="calculateByDistance(this)">Calculate</button>
+                	<button class="button button--primary ml-auto" onclick="calculateByDistance(this); animateElements();" data-action="calculateByDistance" id="action-button">Calculate</button>
                 </div>
+                
+                
                 
                 
                 
@@ -223,11 +227,10 @@
         </svg>
         		<p class="calculator-error__title">There was an error with your calculation.</p>
         	</div>
-        	<div class="col" id="error-list">
-        	</div>
+        	<div class="col" id="error-list"></div>
         </div>        <span id="calculator_result"><div class="calculator-result col">
 	<p class="table-cell table-cell--dark table-cell--only-title">Result</p>
-	<p class="table-cell" id="result">377 calories</p>
+	<p class="table-cell animate" id="result">377 calories</p>
 </div>
 </span>
     </div>

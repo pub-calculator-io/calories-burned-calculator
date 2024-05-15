@@ -19,7 +19,7 @@ function calculate(){
 	}
 
 	let caloriesBurned = caloriesPerMinute * duration;
-	output.val(caloriesBurned.toFixed(0) + ' calories').set('result');
+	output.val(plural(caloriesBurned.toFixed(0), 'calories:calorie:calories:calories:calories:calories')).set('result');
 }
 
 function calculateByDistance() {
