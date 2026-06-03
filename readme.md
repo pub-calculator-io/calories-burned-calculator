@@ -1,6 +1,6 @@
 # Calories Burned Calculator Widget for WordPress
 
-Track your calorie burn with our free calorie calculator. Quickly estimate your calories burned based on activity and duration.
+Discover how many calories you burn during exercise. Our free Calories Burned Calculator gives accurate estimates based on activity, weight, and duration.
 
 ![Calories Burned Calculator Input Form](/assets/images/screenshot-1.png "Calories Burned Calculator Input Form")
 
@@ -11,8 +11,8 @@ Track your calorie burn with our free calorie calculator. Quickly estimate your 
 3. Activate the [Calories Burned Calculator](https://www.calculator.io/calories-burned-calculator/ "Calories Burned Calculator Homepage") plugin through the "Plugins" menu in WordPress.
 
 ## Usage
-* Add the shortcode `[ci_calories_burned_calculator]` to your page, post or sidebar.
-* Or add the following code: `<?php display_ci_calories_burned_calculator(); ?>` to your template where you would like the Calories Burned Calculator to appear.
+* Add the shortcode `[calcio_calories_burned_calculator]` to your page, post or sidebar.
+* Or add the following code: `<?php display_calcio_calories_burned_calculator(); ?>` to your template where you would like the Calories Burned Calculator to appear.
 
 ## Libraries in Use
 1. https://mathjs.org/

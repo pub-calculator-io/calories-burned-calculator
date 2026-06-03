@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <meta name="description" content="Track your calorie burn with our free calorie calculator. Quickly estimate your calories burned based on activity and duration.">
+    <meta name="description" content="Discover how many calories you burn during exercise. Our free Calories Burned Calculator gives accurate estimates based on activity, weight, and duration.">
     <link rel="preload" href="./assets/fonts/inter-v12-latin-regular.woff2" as="font" crossorigin type="font/woff2">
     <link rel="preload" href="./assets/fonts/inter-v12-latin-500.woff2" as="font" crossorigin type="font/woff2">
     <link rel="preload" href="./assets/fonts/inter-v12-latin-600.woff2" as="font" crossorigin type="font/woff2">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="calculator-content col tab tab--active" data-tab="0">
                 	<div class="input-wrapper row">
-                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator">
+                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator" style="">
                 			<p class="input__title">Activity</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -49,7 +49,8 @@
                 					</select>
                 				</div>
                 			</div>
-                		</label>	</div>
+                		</label>
+                	</div>
                 	<div class="input-wrapper row">
                 		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator  ">
                 			<p class="input__title">Duration</p>
@@ -85,7 +86,7 @@
                 </div>
                 <div class="calculator-content col tab" data-tab="1">
                 	<div class="input-wrapper row">
-                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator">
+                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator" style="">
                 			<p class="input__title">Activity</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -102,9 +103,10 @@
                 					</select>
                 				</div>
                 			</div>
-                		</label>	</div>
+                		</label>
+                	</div>
                 	<div class="input-wrapper row">
-                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator">
+                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator" style="">
                 			<p class="input__title">Speed mph</p>
                 			<div class="dropdown-wrapper">
                 				<div class="input-field row " tabindex="0">
@@ -124,7 +126,8 @@
                 					</select>
                 				</div>
                 			</div>
-                		</label>		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator  ">
+                		</label>
+                		<label class="input col calorie-calculator,bmr-calculator,ideal-weight-calculator,tdee-calculator,macro-calculator,protein-calculator  ">
                 			<p class="input__title">Distance</p>
                 			<div class="input-field row">
                 				<input type="text" class="input-field__input" placeholder=""  id="distance" value="5"  />
@@ -148,31 +151,36 @@
                 		</label>
                 	</div>
                 </div>
-                <div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row tab tab--active" data-tab="0">
+                <div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row tab tab--active"
+                	data-tab="0" >
                 
                 
-                		<button class="system-switcher" onclick="toggleSystem(this)" aria-label="Switch System">
-                			<div class="system-switcher__circle"></div>
-                			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                	<button class="system-switcher" onclick="toggleSystem(this); calculate(); animateElements();"
+                		aria-label="Switch System">
+                		<div class="system-switcher__circle"></div>
+                		<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 	<path d="M10.5 9.5H10C9.44772 9.5 9 9.05228 9 8.5V2.5M4.5 2.5H3.5C2.94772 2.5 2.5 2.94772 2.5 3.5L2.5 9.5M7.5 4.5L10.5 4.5M1.5 5.5L4.5 5.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
                 </svg>
-                			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                		<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 	<path d="M2 3.5L2 8.5M2 8L2 5.5C2 4.39543 2.89543 3.5 4 3.5C5.10457 3.5 6 4.39543 6 5.5M6 5.5L6 8.5M6 5.5L6 8M6 5.5C6 4.39543 6.89543 3.5 8 3.5C9.10457 3.5 10 4.39543 10 5.5V8.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
                 </svg>
-                		</button>
+                	</button>
                 
-                		<script type="text/javascript">
-                			$$(".imperial-system-item, .metric-system-item").forEach(function(element, index){
-                				element.classList.remove("system-item-hidden");
-                			});
-                			$$((defaultSystem == "metric") ? ".imperial-system-item" : ".metric-system-item").forEach(function(element, index){
-                				element.classList.add("system-item-hidden");
-                			});
-                			if(defaultSystem == "metric") $('.system-switcher').classList.add('system-switcher--active');
-                		</script>
+                	<script type="text/javascript">
+                		$$(".imperial-system-item, .metric-system-item").forEach(function (element, index) {
+                			element.classList.remove("system-item-hidden");
+                		});
+                		$$((defaultSystem == "metric") ? ".imperial-system-item" : ".metric-system-item").forEach(function (element, index) {
+                			element.classList.add("system-item-hidden");
+                		});
+                		if (defaultSystem == "metric") $('.system-switcher').classList.add('system-switcher--active');
+                	</script>
                 
                 
-                	<button class="button button--primary ml-auto" onclick="calculate(this); animateElements();" data-action="calculate" id="action-button">Calculate</button>
+                
+                	<button class="button button--primary  ml-auto "
+                		onclick="calculate(this); animateElements();" data-action="calculate"
+                		id="action-button">Calculate</button>
                 </div>
                 
                 
@@ -180,32 +188,37 @@
                 
                 
                 
-                	<script type="text/javascript" src="./assets/js/calculator.js" defer></script>
-                <div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row tab " data-tab="1">
+                <script type="text/javascript" src="./assets/js/calculator.js" defer></script>
+                <div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row tab "
+                	data-tab="1" >
                 
                 
-                		<button class="system-switcher" onclick="toggleSystem(this)" aria-label="Switch System">
-                			<div class="system-switcher__circle"></div>
-                			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                	<button class="system-switcher" onclick="toggleSystem(this); calculate(); animateElements();"
+                		aria-label="Switch System">
+                		<div class="system-switcher__circle"></div>
+                		<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 	<path d="M10.5 9.5H10C9.44772 9.5 9 9.05228 9 8.5V2.5M4.5 2.5H3.5C2.94772 2.5 2.5 2.94772 2.5 3.5L2.5 9.5M7.5 4.5L10.5 4.5M1.5 5.5L4.5 5.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
                 </svg>
-                			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                		<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 	<path d="M2 3.5L2 8.5M2 8L2 5.5C2 4.39543 2.89543 3.5 4 3.5C5.10457 3.5 6 4.39543 6 5.5M6 5.5L6 8.5M6 5.5L6 8M6 5.5C6 4.39543 6.89543 3.5 8 3.5C9.10457 3.5 10 4.39543 10 5.5V8.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
                 </svg>
-                		</button>
+                	</button>
                 
-                		<script type="text/javascript">
-                			$$(".imperial-system-item, .metric-system-item").forEach(function(element, index){
-                				element.classList.remove("system-item-hidden");
-                			});
-                			$$((defaultSystem == "metric") ? ".imperial-system-item" : ".metric-system-item").forEach(function(element, index){
-                				element.classList.add("system-item-hidden");
-                			});
-                			if(defaultSystem == "metric") $('.system-switcher').classList.add('system-switcher--active');
-                		</script>
+                	<script type="text/javascript">
+                		$$(".imperial-system-item, .metric-system-item").forEach(function (element, index) {
+                			element.classList.remove("system-item-hidden");
+                		});
+                		$$((defaultSystem == "metric") ? ".imperial-system-item" : ".metric-system-item").forEach(function (element, index) {
+                			element.classList.add("system-item-hidden");
+                		});
+                		if (defaultSystem == "metric") $('.system-switcher').classList.add('system-switcher--active');
+                	</script>
                 
                 
-                	<button class="button button--primary ml-auto" onclick="calculateByDistance(this); animateElements();" data-action="calculateByDistance" id="action-button">Calculate</button>
+                
+                	<button class="button button--primary  ml-auto "
+                		onclick="calculateByDistance(this); animateElements();" data-action="calculateByDistance"
+                		id="action-button">Calculate</button>
                 </div>
                 
                 
